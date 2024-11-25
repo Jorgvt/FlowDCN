@@ -29,12 +29,14 @@ Our code also support LogNorm and VAR(Various Aspect Ratio Training)
 
 ### Visualizations
 
-CFG1.375 Generation Images:
+#### CFG1.375 Generation Images:
 
 |     Models      | Resolution |                                     Link                                      |
 |:---------------:|:-----------|:-----------------------------------------------------------------------------:|
 | FlowDCN-XL-100k | 512x512    | [HF](https://huggingface.co/datasets/wangsssssss/FlowDCN-XL-100K-R512-Images) |
 |  FlowDCN-XL-2M  | 256x256    |  [HF](https://huggingface.co/datasets/wangsssssss/FlowDCN-XL-2M-R256-Images)  |
+
+#### CFG4.0 selected Generation Images:
 
 ![caps](./figs/vis_ode.png)
 
