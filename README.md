@@ -23,9 +23,9 @@ Our code also support LogNorm and VAR(Various Aspect Ratio Training)
 |   FlowDCN-XL-2M    |  256x256   |  EulerODE-250   |  250x2  | 2.01 | 4.33 |  618M  |   [HF](https://huggingface.co/wangsssssss/FlowDCN/blob/main/FlowDCN-XL-2M-R256.pth)    |
 |   FlowDCN-XL-2M    |  256x256   |  EulerSDE-250   |  250x2  | 2.00 | 4.37 |  618M  |   [HF](https://huggingface.co/wangsssssss/FlowDCN/blob/main/FlowDCN-XL-2M-R256.pth)    |
 |   FlowDCN-XL-2M    |  256x256   | NeuralSolver-10 |  10x2   | 2.35 | 5.07 |  618M  |   [HF](https://huggingface.co/wangsssssss/FlowDCN/blob/main/FlowDCN-XL-2M-R256.pth)    |
-|  FlowDCN-XL-100k   |  512x512   |   EulerODE-50   |  50x2   | 2.76 | 5.29 |  618M  |  [HF](https://huggingface.co/wangsssssss/FlowDCN/blob/main/FlowDCN-XL-100K-R256.pth)   |
-|  FlowDCN-XL-100k   |  512x512   |  EulerSDE-250   |  250x2  | 2.44 | 4.53 |  618M  |  [HF](https://huggingface.co/wangsssssss/FlowDCN/blob/main/FlowDCN-XL-100K-R256.pth)   |
-|  FlowDCN-XL-100k   |  512x512   | NeuralSolver-10 |  10x2   | 2.77 | 4.68 |  618M  |  [HF](https://huggingface.co/wangsssssss/FlowDCN/blob/main/FlowDCN-XL-100K-R256.pth)   |
+|  FlowDCN-XL-100k   |  512x512   |   EulerODE-50   |  50x2   | 2.76 | 5.29 |  618M  |  [HF](https://huggingface.co/wangsssssss/FlowDCN/blob/main/FlowDCN-XL-100K-R512.pth)   |
+|  FlowDCN-XL-100k   |  512x512   |  EulerSDE-250   |  250x2  | 2.44 | 4.53 |  618M  |  [HF](https://huggingface.co/wangsssssss/FlowDCN/blob/main/FlowDCN-XL-100K-R512.pth)   |
+|  FlowDCN-XL-100k   |  512x512   | NeuralSolver-10 |  10x2   | 2.77 | 4.68 |  618M  |  [HF](https://huggingface.co/wangsssssss/FlowDCN/blob/main/FlowDCN-XL-100K-R512.pth)   |
 
 ### Visualizations
 
