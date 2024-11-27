@@ -34,12 +34,12 @@ class ReWriteRootDirCli(LightningCLI):
         if subcommand == "predict":
                 self.config[subcommand]["trainer"]["logger"] = None
 
-        # # predict path check
-        # if subcommand == "predict":
-        #     pred_root = os.path.join(default_root_dir,self.config[subcommand]["model"]["save_dir"])
-        #     if os.path.exists(pred_root):
-        #         if len(os.listdir(pred_root)) != 0:
-        #             raise ValueError(f"Prediction path {pred_root} is not empty")
+        # predict path check in order to avoid overwriting
+        if subcommand == "predict":
+            pred_root = os.path.join(default_root_dir,self.config[subcommand]["model"]["save_dir"])
+            if os.path.exists(pred_root):
+                if len(os.listdir(pred_root)) != 0:
+                    raise ValueError(f"Prediction path {pred_root} is not empty")
 
 
     def add_arguments_to_parser(self, parser: LightningArgumentParser) -> None:
