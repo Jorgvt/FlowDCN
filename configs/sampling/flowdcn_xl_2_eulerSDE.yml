@@ -88,7 +88,7 @@ model:
       scheduler: *scheduler
       null_class: *num_classes
       w_scheduler: src.diffusion.flow_matching.scheduling.LinearScheduler
-      step_fn: src.diffusion.flow_matching.sampling.sde_step_fn
+      step_fn: src.diffusion.flow_matching.sampling.sde_preserve_step_fn
       guidance_fn: src.diffusion.base.guidance.simple_guidance_fn
       last_step: 0.04
       num_steps: *num_steps
