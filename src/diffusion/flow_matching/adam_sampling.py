@@ -52,7 +52,7 @@ class AdamLMSampler(BaseSampler):
 
     def _impl_sampling(self, net, images, labels):
         """
-        sampling process of Euler sampler
+        sampling process of Adams-like LMS sampler
         -
         """
         batch_size = images.shape[0]
