@@ -91,7 +91,7 @@ model:
       guidance_fn: src.diffusion.base.guidance.simple_guidance_fn
       last_step: 0.04
       num_steps: *num_steps
-      guidance: 4
+      guidance: 1.375
   optimizer:
     class_path: torch.optim.AdamW
     init_args:
