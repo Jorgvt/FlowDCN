@@ -13,17 +13,18 @@ class LocalDataset(ImageFolder):
         data = super().__getitem__(idx)
         img, label = self.data_convert(data)
         return img, label
+
 import numpy as np
+import pathlib
 from torch.utils.data import Dataset
 class LocalCachedDataset(Dataset):
     def __init__(self, root,):
         super().__init__()
-        self.root = root
-        cache_names_file = os.path.join(root, 'cache_names.txt')
-        with open(cache_names_file, 'r') as f:
-            self.filenames = f.readlines()
+        self.root = pathlib.Path(root)
+        self.filenames = self.root.glob('*.pt')
         self.filenames = sorted(self.filenames)
-        self.filenames = [x.strip() for x in self.filenames]
+        self.filenames = [str(x) for x in self.filenames]
+
     def __getitem__(self, idx: int):
         filename = os.path.join(self.root,self.filenames[idx])
         pk_data = torch.load(filename)
