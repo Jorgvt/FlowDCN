@@ -56,7 +56,7 @@ Our code also support LogNorm and VAR(Various Aspect Ratio Training)
 [//]: # ()
 [//]: # (![caps]&#40;./figs/var_fid.png&#41;)
 
-## Linear-Multi-step Solvers and NeuralSolvers
+## Linear-Multi-step Solvers
 We also provide a adams-like linear-multi-step solver for the recitified flow sampling. The related configs are named with `adam2` or `adam4`. The solver code are placed in `./src/diffusion/flow_matching/adam_sampling.py`.
 
 Compared to Henu/RK4, the linear-multi-step solver is more stable and faster.
