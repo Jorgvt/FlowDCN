@@ -29,6 +29,7 @@ Our code also support LogNorm and VAR(Various Aspect Ratio Training)
 
 ### Usages
 remember download models and change the VAE and pretrained models path
+
 **For training**
 ```
 python3 main.py fit -c configs/CONFIG
