@@ -27,6 +27,17 @@ Our code also support LogNorm and VAR(Various Aspect Ratio Training)
 |  FlowDCN-XL-100k   |  512x512   |  EulerSDE-250   |  250x2  | 2.44 | 4.53 |  618M  |  [HF](https://huggingface.co/wangsssssss/FlowDCN/blob/main/FlowDCN-XL-100K-R512.pth)   |
 |  FlowDCN-XL-100k   |  512x512   | NeuralSolver-10 |  10x2   | 2.77 | 4.68 |  618M  |  [HF](https://huggingface.co/wangsssssss/FlowDCN/blob/main/FlowDCN-XL-100K-R512.pth)   |
 
+### Usages
+remember download models and change the VAE and pretrained models path
+**For training**
+```
+python3 main.py fit -c configs/CONFIG
+```
+**For sampling**
+```
+python3 main.py predict -c configs/CONFIG
+```
+
 ### Visualizations
 
 #### CFG1.375 Generation Images:
