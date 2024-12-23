@@ -89,7 +89,7 @@ model:
       scheduler: *scheduler
       null_class: *num_classes
       w_scheduler: src.diffusion.flow_matching.scheduling.LinearScheduler
-      step_fn: src.diffusion.flow_matching.sampling.sde_step_fn
+      step_fn: src.diffusion.flow_matching.adam_sampling.ode_step_fn
       guidance_fn: src.diffusion.base.guidance.simple_guidance_fn
       num_steps: *num_steps
       guidance: 4
