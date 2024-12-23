@@ -132,4 +132,3 @@ data:
     - 4
     - 32
     - 32
-ckpt_path: ../vis/e200_xl.ckpt
