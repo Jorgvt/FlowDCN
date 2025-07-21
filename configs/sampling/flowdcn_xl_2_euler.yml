@@ -100,7 +100,7 @@ model:
       weight_decay: 0.00
   lr_scheduler: null
   vae_path:  stabilityai/sd-vae-ft-ema
-  denoiser_path: null #TODO: path to pretrained denoiser
+  denoiser_path: wangsssssss/FlowDCN/FlowDCN-XL-2M-R256.pth  #TODO: path to pretrained denoiser
   precompute_metric_data: null
   save_dir: euler
 data:
