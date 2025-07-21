@@ -6,7 +6,7 @@ import numpy
 from torch import Tensor
 from torch.nn import Module
 from copy import deepcopy
-from torchmetrics.image import KernelInceptionDistance
+from torchmetrics.image.kid import KernelInceptionDistance
 from torchmetrics.utilities.data import dim_zero_cat
 from torch_fidelity.feature_extractor_inceptionv3 import FeatureExtractorInceptionV3, interpolate_bilinear_2d_like_tensorflow1x
 from torch.nn.functional import adaptive_avg_pool2d
