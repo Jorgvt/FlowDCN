@@ -138,8 +138,11 @@ class LightningModel(pl.LightningModule):
 
         # Sample images:
         samples = self.diffusion_sampler(self.denoiser, zT, y)
+        # print(f"Sampler: {self.diffusion_sampler.__dict__}")
         # samples = samples.to(self.vae.dtype)
+        # print(f"Before decoding: {samples.min()} {samples.max()}")
         samples = self.vae.decode(samples)
+        # print(f"After decoding: {samples.min()} {samples.max()}")
 
         if save:
             if self.trainer.is_global_zero:
@@ -150,6 +153,7 @@ class LightningModel(pl.LightningModule):
         if self.precompute_metric_data is not None:
             # fp32 -1,1 -> uint8 0,255
             samples = torch.clip_((samples+1)*127.5 + 0.5, 0, 255).to(torch.uint8)
+            # print(f"After decoding: {samples.min()} {samples.max()}")
             self.metric.update(samples, False)
         return samples
 

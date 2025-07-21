@@ -3,6 +3,7 @@ from typing import Dict, Any, Optional
 import torch
 import torch.nn as nn
 from lightning.fabric.utilities.types import _PATH
+from huggingface_hub import hf_hub_download
 
 
 import logging
@@ -15,6 +16,8 @@ class ModelLoader:
         self._device = device
         self._vae_path = vae_path
         self._denoiser_path = denoiser_path
+        self._repo_id = "/".join(denoiser_path.split("/")[:-1])
+        self._filename = denoiser_path.split("/")[-1]
         self._precompute_data_path = precompute_data_path
         self._dtype = dtype  # not used
 
@@ -30,7 +33,9 @@ class ModelLoader:
         if self._vae_path:
            vae = vae.from_pretrained(self._vae_path).to(self._device)
         if self._denoiser_path:
-            weight = torch.load(self._denoiser_path, map_location=torch.device('cpu'))
+            ckpt_path = hf_hub_download(repo_id=self._repo_id, filename=self._filename)
+            weight = torch.load(ckpt_path, map_location=torch.device('cpu'))
+            # weight = torch.load(self._denoiser_path, map_location=torch.device('cpu'))
             # import pdb; pdb.set_trace()
             if "optimizer_states" in weight.keys():
                 weight = weight["optimizer_states"][0]["ema"]
